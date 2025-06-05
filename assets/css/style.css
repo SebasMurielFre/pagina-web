@@ -1,0 +1,207 @@
+/* Estilos personalizados para PROINVESTEC SA */
+
+/* Transiciones globales */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Efectos hover */
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos para el logo */
+.logo-container img {
+  max-height: 100%;
+  width: auto;
+}
+
+/* Estilos para el chatbot */
+#chatbot-window {
+  max-height: 500px;
+}
+
+/* Estilos para formularios */
+.form-input:focus {
+  outline: none;
+  border-color: #1e3a8a;
+  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+/* Estilos para botones */
+.btn-primary {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: rgba(30, 58, 138, 0.9);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #fbbf24;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(251, 191, 36, 0.9);
+  transform: translateY(-2px);
+}
+
+/* Estilos para cards */
+.card {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+/* Estilos para el navbar móvil */
+@media (max-width: 768px) {
+  #mobile-menu {
+    transition: all 0.3s ease;
+  }
+
+  #mobile-menu.show {
+    display: block;
+  }
+}
+
+/* Estilos para testimonios */
+.testimonial-card {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+/* Estilos para estrellas */
+.star-rating {
+  color: #fbbf24;
+}
+
+/* Estilos para modales */
+.modal {
+  backdrop-filter: blur(4px);
+}
+
+/* Estilos responsivos */
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+}
+
+/* Estilos para FAQ */
+.faq-item {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 0;
+}
+
+.faq-question {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.faq-answer {
+  margin-top: 0.5rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Estilos para productos */
+.product-card {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.product-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.product-icon {
+  font-size: 3rem;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+/* Estilos para contacto */
+.contact-info {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+  color: #1e3a8a;
+  margin-right: 0.5rem;
+}
+
+/* Estilos para el mapa */
+.map-container {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el header */
+nav .flex.items-center a img {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Aumentar tamaño de texto en navegación */
+nav .text-base {
+  font-size: 1.05rem;
+}
