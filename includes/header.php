@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo isset($page_title) ? $page_title : 'PROINVESTEC SA'; ?></title>
     <meta name="description" content="PROINVESTEC SA: Líderes en firmas electrónicas, certificados digitales y facturación electrónica en Ecuador. Soluciones 100% seguras y avaladas por el SRI para empresas y personas.">
+    <meta name="robots" content="index, follow">
     <meta name="keywords" content="firma electrónica Ecuador, certificado digital SRI, facturación electrónica Quito, Proinvestec, comprobantes electrónicos">
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
