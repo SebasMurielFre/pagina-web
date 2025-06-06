@@ -1,0 +1,55 @@
+### PROTECCIÓN GLOBAL ###
+Options -Indexes -ExecCGI
+ServerSignature Off
+
+# =============================================
+# BLOQUEAR ACCESO DIRECTO A ARCHIVOS SENSIBLES
+# =============================================
+<FilesMatch "\.(sql|json|env|htaccess|bak|inc|log|ini)$">
+    Require all denied
+</FilesMatch>
+
+<FilesMatch "(database\.php|composer\.json|install\.php)">
+    Require all denied
+</FilesMatch>
+
+# ========================
+# PROTEGER DIRECTORIOS
+# ========================
+# Bloquear acceso directo a /config/
+RewriteRule ^config/ - [F,L]
+
+# Bloquear acceso a /includes/ (aunque debería estar fuera de public_html)
+RewriteRule ^includes/ - [F,L]
+
+# ==================================
+# MANUALES: SOLO DESCARGAS CONTROLADAS
+# ==================================
+RewriteCond %{REQUEST_URI} ^/manuales/downloads/ [NC]
+RewriteCond %{QUERY_STRING} !^key= [NC]  # Opcional: usa clave secreta
+RewriteRule ^ - [F,L]
+
+# ========================
+# PROTECCIÓN EXTRA
+# ========================
+# Bloquear archivos ocultos (.git, .env, etc.)
+RedirectMatch 404 /\..*$
+
+# Prevenir ataques comunes
+RewriteCond %{QUERY_STRING} (;|<|>|'|"|\)|%0A|%0D|%22|%27|%3C|%3E|%00) [NC]
+RewriteRule ^ - [F,L]
+
+# ========================
+# WHITELIST: LO PERMITIDO
+# ========================
+<FilesMatch "\.(jpg|jpeg|png|gif|css|js|pdf|php)$">
+    Require all granted
+</FilesMatch>
+
+# Permitir solo archivos PHP principales
+<Files ~ "(index|contacto|nosotros|productos|faq|clientes|manuales)\.php$">
+    Require all granted
+</Files>
+
+ErrorDocument 403 /error403.html
+ErrorDocument 404 /error404.html
