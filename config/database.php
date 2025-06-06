@@ -1,6 +1,6 @@
 <?php
 // Configuración de la base de datos
-$host = 'proinvestec.c6h8iuougpsr.us-east-1.rds.amazonaws.com';
+$host = 'proinvestecdb.ccrygqa4i1kp.us-east-1.rds.amazonaws.com';
 $dbname = 'proinvestec';
 $username = 'postgres';
 $password = 'SmfBsc00148*';
